@@ -128,6 +128,8 @@
 		99A95C3C1F617ABA008F1511 /* PrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 99A95C381F617ABA008F1511 /* PrefixHeader.pch */; };
 		99A95C441F61868F008F1511 /* hx_object.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A95C421F61868F008F1511 /* hx_object.h */; };
 		99A95C451F61868F008F1511 /* hx_object.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A95C431F61868F008F1511 /* hx_object.m */; };
+		99F7B6F31F6794870051882C /* GameDisPlayName.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F7B6F11F6794870051882C /* GameDisPlayName.h */; };
+		99F7B6F41F6794870051882C /* GameDisPlayName.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F7B6F21F6794870051882C /* GameDisPlayName.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -254,6 +256,8 @@
 		99A95C381F617ABA008F1511 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		99A95C421F61868F008F1511 /* hx_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hx_object.h; sourceTree = "<group>"; };
 		99A95C431F61868F008F1511 /* hx_object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hx_object.m; sourceTree = "<group>"; };
+		99F7B6F11F6794870051882C /* GameDisPlayName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDisPlayName.h; sourceTree = "<group>"; };
+		99F7B6F21F6794870051882C /* GameDisPlayName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDisPlayName.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -555,6 +559,8 @@
 				9990044C1F5EAFC2008F4522 /* CSValidation.m */,
 				991BB0571F5F948C00FA8783 /* DynamicMethods.h */,
 				991BB0581F5F948C00FA8783 /* DynamicMethods.m */,
+				99F7B6F11F6794870051882C /* GameDisPlayName.h */,
+				99F7B6F21F6794870051882C /* GameDisPlayName.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -562,10 +568,10 @@
 		99A57BA51F5E613F00B2EB7A = {
 			isa = PBXGroup;
 			children = (
-				99A95C341F617AB9008F1511 /* Resource */,
 				99222DD71F5E8777003CB619 /* CSGameLib */,
 				99222DE61F5E8777003CB619 /* Info.plist */,
 				99A57BB01F5E613F00B2EB7A /* Products */,
+				99A95C341F617AB9008F1511 /* Resource */,
 			);
 			sourceTree = "<group>";
 		};
@@ -623,6 +629,7 @@
 				99222F681F5EA20E003CB619 /* MASConstraintMaker.h in Headers */,
 				99222F7A1F5EA20E003CB619 /* ViewController+MASAdditions.h in Headers */,
 				99222EDE1F5E8AD6003CB619 /* CSUrlModel.h in Headers */,
+				99F7B6F31F6794870051882C /* GameDisPlayName.h in Headers */,
 				99222ED31F5E89BC003CB619 /* MBViewController.h in Headers */,
 				99222F701F5EA20E003CB619 /* MASViewConstraint.h in Headers */,
 				991BB0591F5F948C00FA8783 /* DynamicMethods.h in Headers */,
@@ -805,6 +812,7 @@
 				99222E661F5E8777003CB619 /* CSAFHTTPSessionManager.m in Sources */,
 				99222E821F5E8777003CB619 /* CSProgressHUD.m in Sources */,
 				99222EAE1F5E8777003CB619 /* CSSBJson4StreamTokeniser.m in Sources */,
+				99F7B6F41F6794870051882C /* GameDisPlayName.m in Sources */,
 				99222E6F1F5E8777003CB619 /* CSAFURLResponseSerialization.m in Sources */,
 				999004561F5EAFC2008F4522 /* CSValidation.m in Sources */,
 				99222F711F5EA20E003CB619 /* MASViewConstraint.m in Sources */,

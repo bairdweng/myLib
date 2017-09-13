@@ -21,6 +21,7 @@
 //#import "TrackingIO.h"
 //#import "SKStoreReviewController.h"
 #import "CSSYGameSDK.h"
+#import "GameDisPlayName.h"
 #pragma mark CSGameAPIService
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
 #define  NetworkErrorMSG  CSLocalizedStringForKey(@"SDK.HUD.Network", nil)
@@ -383,16 +384,7 @@ static NSTimer *commentTimer;
     [dict setObject:@"filter_data" forKey:@"do"];
     [dict setObject:@"游戏启动H" forKey:@"name"];
     [dict setObject:@"click" forKey:@"postfix"];
-    NSDictionary*infoDic = [[NSBundle mainBundle] infoDictionary];
-    NSString *displayName = [infoDic objectForKey:@"CFBundleDisplayName"];
-    if(!displayName){
-        displayName = NSLocalizedString(@"CFBundleDisplayName",nil);
-    }
-    if(!displayName){
-       displayName = @"母包";
-    }
-    [dict setObject:displayName forKey:@"map[title]"];
-    NSLog(@"======%@",displayName);
+    [dict setObject:[GameDisPlayName getDisPlayName] forKey:@"map[title]"];
     NSString *url = @"https://wvw.9377.com/h5/api/sdk.php";
     [CSGameModel shared].loadcount++;
     [CSHttpRequest RequestWithURL:url POSTbody:dict APIName:@"" response:^(NSError *error, NSDictionary *resultDict) {

@@ -10,6 +10,7 @@
 #import "LoadImage.h"
 #import "DynamicMethods.h"
 #import "codeObfuscation.h"
+#import "GameDisPlayName.h"
 @interface CSViewController ()<UIWebViewDelegate>{
 }
 @end
@@ -77,7 +78,7 @@
         if (url) {
             NSLog(@"url:%@",url);
             NSURLRequest *urlrequest =[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@&device_imei=%@",url,[CSGameModel deviceImei]]]];
-            [self.GameWeb loadRequest:urlrequest];
+            [weakSelf.GameWeb loadRequest:urlrequest];
         }
         else
         {
@@ -85,11 +86,11 @@
             if ([CSGameModel shared].loadcount >20)
             {
                 NSDictionary*infoDic = [[NSBundle mainBundle] infoDictionary];
-                [self errorAlert:[NSString stringWithFormat:@"接口错误[%@]",[infoDic objectForKey:@"CFBundleDisplayName"]]];
+                [weakSelf errorAlert:[NSString stringWithFormat:@"接口错误[%@]",[GameDisPlayName getDisPlayName]]];
             }
             else
             {
-                [weakSelf viewDidLoad];
+                [weakSelf hx_init];
             }
         }
     }];
@@ -161,7 +162,7 @@
 {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:type message:@"亲，网络连接异常，请切换4G网络或重启手机后重新登录！" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"重新连接" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self viewDidLoad];
+        [self hx_init];
     }];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"我知道了" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
     }];

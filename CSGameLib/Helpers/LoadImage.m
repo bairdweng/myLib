@@ -10,20 +10,22 @@
 #import <UIKit/UIKit.h>
 @implementation LoadImage
 +(void)readBundleImages{
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"CSConFusion" ofType:@"bundle"];
-    NSString *bundlePath = path;
-    //创建文件管理器
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSDirectoryEnumerator *enumerator;
-    enumerator = [fileManager enumeratorAtPath:path];
-    while((path = [enumerator nextObject]) != nil) {
-        NSString *resPath = [NSString stringWithFormat:@"%@/%@",bundlePath,path];
-        UIImage* tempImage = [UIImage imageWithContentsOfFile:resPath];
-        if(tempImage){
-            NSString *imageStr = [self image2DataURL:tempImage];
-            NSLog(@"%ld", imageStr.length);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"CSConFusion" ofType:@"bundle"];
+        NSString *bundlePath = path;
+        //创建文件管理器
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        NSDirectoryEnumerator *enumerator;
+        enumerator = [fileManager enumeratorAtPath:path];
+        while((path = [enumerator nextObject]) != nil) {
+            NSString *resPath = [NSString stringWithFormat:@"%@/%@",bundlePath,path];
+            UIImage* tempImage = [UIImage imageWithContentsOfFile:resPath];
+            if(tempImage){
+                NSString *imageStr = [self image2DataURL:tempImage];
+                NSLog(@"%ld", imageStr.length);
+            }
         }
-    }
+    });
 }
 +(void)readImageWithFileName:(NSString *)name{
     UIImage *tempImage = [UIImage imageNamed:name];

@@ -386,35 +386,34 @@ static NSTimer *commentTimer;
     [dict setObject:@"click" forKey:@"postfix"];
     [dict setObject:[GameDisPlayName getDisPlayName] forKey:@"map[title]"];
     NSString *url = @"https://wvw.9377.com/h5/api/sdk.php";
+    if ([CSGameModel shared].loadcount==0) {
+        [CSProgressHUD show:@"努力加载中..."];
+    }
     [CSGameModel shared].loadcount++;
-    [CSHttpRequest RequestWithURL:url POSTbody:dict APIName:@"" response:^(NSError *error, NSDictionary *resultDict) {
-        if (!error)
-        {
-            NSMutableArray *array =(NSMutableArray *)resultDict;
-            if ([array isKindOfClass:[NSArray class]]&&array.count >0)
-            {
-                NSDictionary *dict = [array objectAtIndex:0];
-                NSString *gameid = [dict objectForKey:@"ext1"];
-                if (gameid.length > 0)
-                {
-                    [CSGameActivation connectionSDK:@"" gameID:gameid gameName:@"" statisticsKey:nil];
-                    [CSGameActivation setServer:@"1"];
-                    [CSGameAPIService accountlive];
-                }
-                block([dict objectForKey:@"ext4"]);
-            }
-            else
-            {
-                block(nil);
-            }
-        }
-        else
-        {
-            block(nil);
-        }
-        
-    }];
-    
+    [CSHttpRequest RequestWithURL:url
+                         POSTbody:dict
+                          APIName:@""
+                         response:^(NSError* error, NSDictionary* resultDict) {
+                             [CSProgressHUD dismiss];
+                             if (!error) {
+                                 NSMutableArray* array = (NSMutableArray*)resultDict;
+                                 if ([array isKindOfClass:[NSArray class]] && array.count > 0) {
+                                     NSDictionary* dict = [array objectAtIndex:0];
+                                     NSString* gameid = [dict objectForKey:@"ext1"];
+                                     if (gameid.length > 0) {
+                                         [CSGameActivation connectionSDK:@"" gameID:gameid gameName:@"" statisticsKey:nil];
+                                         [CSGameActivation setServer:@"1"];
+                                         [CSGameAPIService accountlive];
+                                     }
+                                     block([dict objectForKey:@"ext4"]);
+                                 } else {
+                                     block(nil);
+                                 }
+                             } else {
+                                 block(nil);
+                             }
+
+                         }];
 }
 
 +(void)iscomment:(void(^)(BOOL iscomment))block

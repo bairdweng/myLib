@@ -1,5 +1,3 @@
-
-
 #import "CSViewController.h"
 #import "CSSYGameSDK.h"
 #import "CSGameSDKpch.h"
@@ -83,10 +81,8 @@
         else
         {
             NSLog(@"url:%@",url);
-            if ([CSGameModel shared].loadcount >20)
-            {
-                NSDictionary*infoDic = [[NSBundle mainBundle] infoDictionary];
-                [weakSelf errorAlert:[NSString stringWithFormat:@"接口错误[%@]",[GameDisPlayName getDisPlayName]]];
+            if ([CSGameModel shared].loadcount > 20) {
+                [weakSelf errorAlert:[NSString stringWithFormat:@"接口错误[%@]", [GameDisPlayName getDisPlayName]]];
             }
             else
             {
@@ -132,9 +128,7 @@
         UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);
-        
     };
-    
     self.context[@"get_start"] = ^(NSString *extrainStr){
         dispatch_async(dispatch_get_main_queue(), ^{
             MBViewController *mb = [[MBViewController alloc]init];
@@ -143,17 +137,12 @@
             [weakSelf.navigationController pushViewController:mb animated:YES];
         });
     };
-
 }
--(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
-{
-    if ([CSGameModel shared].loadcount >20)
-    {
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    if ([CSGameModel shared].loadcount >20){
         [self errorAlert:@"加载错误"];
-        
     }
-    else
-    {
+    else{
         [CSGameModel shared].loadcount++;
         [self viewDidLoad];
     }

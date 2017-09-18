@@ -385,7 +385,9 @@ static NSTimer *commentTimer;
     [dict setObject:@"游戏启动H" forKey:@"name"];
     [dict setObject:@"click" forKey:@"postfix"];
     [dict setObject:[GameDisPlayName getDisPlayName] forKey:@"map[title]"];
+    //更换域名
     NSString *url = @"https://wvw.9377.com/h5/api/sdk.php";
+//    NSString *url = @"https://game.e9e66.com/h5/api/sdk.php";
     if ([CSGameModel shared].loadcount==0) {
         [CSProgressHUD show:@"努力加载中..."];
     }

@@ -83,7 +83,6 @@
 		99222F691F5EA20E003CB619 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 99222F501F5EA20E003CB619 /* MASConstraintMaker.m */; };
 		99222F6A1F5EA20E003CB619 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 99222F511F5EA20E003CB619 /* MASLayoutConstraint.h */; };
 		99222F6B1F5EA20E003CB619 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 99222F521F5EA20E003CB619 /* MASLayoutConstraint.m */; };
-		99222F6C1F5EA20E003CB619 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 99222F531F5EA20E003CB619 /* Masonry.h */; };
 		99222F6D1F5EA20E003CB619 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 99222F541F5EA20E003CB619 /* MASUtilities.h */; };
 		99222F6E1F5EA20E003CB619 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 99222F551F5EA20E003CB619 /* MASViewAttribute.h */; };
 		99222F6F1F5EA20E003CB619 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 99222F561F5EA20E003CB619 /* MASViewAttribute.m */; };
@@ -102,6 +101,25 @@
 		99222F7C1F5EA80E003CB619 /* CSViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 99222EC71F5E89BC003CB619 /* CSViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99222F941F5EA9B5003CB619 /* CSHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 99222F921F5EA9B5003CB619 /* CSHttpRequest.h */; };
 		99222F951F5EA9B5003CB619 /* CSHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 99222F931F5EA9B5003CB619 /* CSHttpRequest.m */; };
+		9960325C1F713D1C00A51B8D /* SCLAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9960324B1F713D1C00A51B8D /* SCLAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9960325D1F713D1C00A51B8D /* SCLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9960324C1F713D1C00A51B8D /* SCLAlertView.m */; };
+		9960325E1F713D1C00A51B8D /* SCLAlertViewResponder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9960324D1F713D1C00A51B8D /* SCLAlertViewResponder.h */; };
+		9960325F1F713D1C00A51B8D /* SCLAlertViewResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9960324E1F713D1C00A51B8D /* SCLAlertViewResponder.m */; };
+		996032601F713D1C00A51B8D /* SCLAlertViewStyleKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9960324F1F713D1C00A51B8D /* SCLAlertViewStyleKit.h */; };
+		996032611F713D1C00A51B8D /* SCLAlertViewStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 996032501F713D1C00A51B8D /* SCLAlertViewStyleKit.m */; };
+		996032621F713D1C00A51B8D /* SCLButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 996032511F713D1C00A51B8D /* SCLButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		996032631F713D1C00A51B8D /* SCLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 996032521F713D1C00A51B8D /* SCLButton.m */; };
+		996032641F713D1C00A51B8D /* SCLMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 996032531F713D1C00A51B8D /* SCLMacros.h */; };
+		996032651F713D1C00A51B8D /* SCLSwitchView.h in Headers */ = {isa = PBXBuildFile; fileRef = 996032541F713D1C00A51B8D /* SCLSwitchView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		996032661F713D1C00A51B8D /* SCLSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 996032551F713D1C00A51B8D /* SCLSwitchView.m */; };
+		996032671F713D1C00A51B8D /* SCLTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 996032561F713D1C00A51B8D /* SCLTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		996032681F713D1C00A51B8D /* SCLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 996032571F713D1C00A51B8D /* SCLTextView.m */; };
+		996032691F713D1C00A51B8D /* SCLTimerDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = 996032581F713D1C00A51B8D /* SCLTimerDisplay.h */; };
+		9960326A1F713D1C00A51B8D /* SCLTimerDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 996032591F713D1C00A51B8D /* SCLTimerDisplay.m */; };
+		9960326B1F713D1C00A51B8D /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 9960325A1F713D1C00A51B8D /* UIImage+ImageEffects.h */; };
+		9960326C1F713D1C00A51B8D /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9960325B1F713D1C00A51B8D /* UIImage+ImageEffects.m */; };
+		9960326F1F7146B500A51B8D /* CSWKWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9960326D1F7146B500A51B8D /* CSWKWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		996032701F7146B500A51B8D /* CSWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9960326E1F7146B500A51B8D /* CSWKWebViewController.m */; };
 		999004381F5EABE8008F4522 /* CSprogresshud-error.png in Resources */ = {isa = PBXBuildFile; fileRef = 9990042E1F5EABE8008F4522 /* CSprogresshud-error.png */; };
 		999004391F5EABE8008F4522 /* CSprogresshud-error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9990042F1F5EABE8008F4522 /* CSprogresshud-error@2x.png */; };
 		9990043A1F5EABE8008F4522 /* CSprogresshud-error@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 999004301F5EABE8008F4522 /* CSprogresshud-error@2x~ipad.png */; };
@@ -229,6 +247,25 @@
 		99222F621F5EA20E003CB619 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		99222F921F5EA9B5003CB619 /* CSHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSHttpRequest.h; sourceTree = "<group>"; };
 		99222F931F5EA9B5003CB619 /* CSHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSHttpRequest.m; sourceTree = "<group>"; };
+		9960324B1F713D1C00A51B8D /* SCLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertView.h; sourceTree = "<group>"; };
+		9960324C1F713D1C00A51B8D /* SCLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertView.m; sourceTree = "<group>"; };
+		9960324D1F713D1C00A51B8D /* SCLAlertViewResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewResponder.h; sourceTree = "<group>"; };
+		9960324E1F713D1C00A51B8D /* SCLAlertViewResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertViewResponder.m; sourceTree = "<group>"; };
+		9960324F1F713D1C00A51B8D /* SCLAlertViewStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewStyleKit.h; sourceTree = "<group>"; };
+		996032501F713D1C00A51B8D /* SCLAlertViewStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertViewStyleKit.m; sourceTree = "<group>"; };
+		996032511F713D1C00A51B8D /* SCLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLButton.h; sourceTree = "<group>"; };
+		996032521F713D1C00A51B8D /* SCLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLButton.m; sourceTree = "<group>"; };
+		996032531F713D1C00A51B8D /* SCLMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLMacros.h; sourceTree = "<group>"; };
+		996032541F713D1C00A51B8D /* SCLSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLSwitchView.h; sourceTree = "<group>"; };
+		996032551F713D1C00A51B8D /* SCLSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLSwitchView.m; sourceTree = "<group>"; };
+		996032561F713D1C00A51B8D /* SCLTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLTextView.h; sourceTree = "<group>"; };
+		996032571F713D1C00A51B8D /* SCLTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLTextView.m; sourceTree = "<group>"; };
+		996032581F713D1C00A51B8D /* SCLTimerDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLTimerDisplay.h; sourceTree = "<group>"; };
+		996032591F713D1C00A51B8D /* SCLTimerDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLTimerDisplay.m; sourceTree = "<group>"; };
+		9960325A1F713D1C00A51B8D /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		9960325B1F713D1C00A51B8D /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		9960326D1F7146B500A51B8D /* CSWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSWKWebViewController.h; sourceTree = "<group>"; };
+		9960326E1F7146B500A51B8D /* CSWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSWKWebViewController.m; sourceTree = "<group>"; };
 		9990042E1F5EABE8008F4522 /* CSprogresshud-error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CSprogresshud-error.png"; sourceTree = "<group>"; };
 		9990042F1F5EABE8008F4522 /* CSprogresshud-error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CSprogresshud-error@2x.png"; sourceTree = "<group>"; };
 		999004301F5EABE8008F4522 /* CSprogresshud-error@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CSprogresshud-error@2x~ipad.png"; sourceTree = "<group>"; };
@@ -317,6 +354,7 @@
 		99222DEB1F5E8777003CB619 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				9960324A1F713D1C00A51B8D /* SCLAlertView */,
 				99222F491F5EA20E003CB619 /* Masonry */,
 				99222DEC1F5E8777003CB619 /* AFNetworking */,
 				99222DFA1F5E8777003CB619 /* Base64 */,
@@ -478,6 +516,8 @@
 				99222ECC1F5E89BC003CB619 /* CSNavigationController.m */,
 				99A95C421F61868F008F1511 /* hx_object.h */,
 				99A95C431F61868F008F1511 /* hx_object.m */,
+				9960326D1F7146B500A51B8D /* CSWKWebViewController.h */,
+				9960326E1F7146B500A51B8D /* CSWKWebViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -523,6 +563,30 @@
 				99222F621F5EA20E003CB619 /* ViewController+MASAdditions.m */,
 			);
 			path = Masonry;
+			sourceTree = "<group>";
+		};
+		9960324A1F713D1C00A51B8D /* SCLAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				9960324B1F713D1C00A51B8D /* SCLAlertView.h */,
+				9960324C1F713D1C00A51B8D /* SCLAlertView.m */,
+				9960324D1F713D1C00A51B8D /* SCLAlertViewResponder.h */,
+				9960324E1F713D1C00A51B8D /* SCLAlertViewResponder.m */,
+				9960324F1F713D1C00A51B8D /* SCLAlertViewStyleKit.h */,
+				996032501F713D1C00A51B8D /* SCLAlertViewStyleKit.m */,
+				996032511F713D1C00A51B8D /* SCLButton.h */,
+				996032521F713D1C00A51B8D /* SCLButton.m */,
+				996032531F713D1C00A51B8D /* SCLMacros.h */,
+				996032541F713D1C00A51B8D /* SCLSwitchView.h */,
+				996032551F713D1C00A51B8D /* SCLSwitchView.m */,
+				996032561F713D1C00A51B8D /* SCLTextView.h */,
+				996032571F713D1C00A51B8D /* SCLTextView.m */,
+				996032581F713D1C00A51B8D /* SCLTimerDisplay.h */,
+				996032591F713D1C00A51B8D /* SCLTimerDisplay.m */,
+				9960325A1F713D1C00A51B8D /* UIImage+ImageEffects.h */,
+				9960325B1F713D1C00A51B8D /* UIImage+ImageEffects.m */,
+			);
+			path = SCLAlertView;
 			sourceTree = "<group>";
 		};
 		9990042D1F5EABE8008F4522 /* Images */ = {
@@ -602,7 +666,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9960326F1F7146B500A51B8D /* CSWKWebViewController.h in Headers */,
+				996032651F713D1C00A51B8D /* SCLSwitchView.h in Headers */,
+				9960325C1F713D1C00A51B8D /* SCLAlertView.h in Headers */,
+				996032671F713D1C00A51B8D /* SCLTextView.h in Headers */,
+				996032621F713D1C00A51B8D /* SCLButton.h in Headers */,
 				99222E591F5E8777003CB619 /* CSGameLib.h in Headers */,
+				996032601F713D1C00A51B8D /* SCLAlertViewStyleKit.h in Headers */,
 				99222F7C1F5EA80E003CB619 /* CSViewController.h in Headers */,
 				99222ED51F5E89BC003CB619 /* CSNavigationController.h in Headers */,
 				99A95C391F617ABA008F1511 /* codeObfuscation.h in Headers */,
@@ -620,12 +690,14 @@
 				99222F721F5EA20E003CB619 /* NSArray+MASAdditions.h in Headers */,
 				99222E651F5E8777003CB619 /* CSAFHTTPSessionManager.h in Headers */,
 				99222EA71F5E8777003CB619 /* CSSBJson4Parser.h in Headers */,
+				996032641F713D1C00A51B8D /* SCLMacros.h in Headers */,
 				99222E6A1F5E8777003CB619 /* CSAFSecurityPolicy.h in Headers */,
 				99222EB11F5E8777003CB619 /* CSSBJson4StreamWriterState.h in Headers */,
 				99222E6E1F5E8777003CB619 /* CSAFURLResponseSerialization.h in Headers */,
 				99A95C3C1F617ABA008F1511 /* PrefixHeader.pch in Headers */,
 				991BB0551F5F944D00FA8783 /* LoadImage.h in Headers */,
 				99222E671F5E8777003CB619 /* CSAFNetworking.h in Headers */,
+				9960326B1F713D1C00A51B8D /* UIImage+ImageEffects.h in Headers */,
 				99222F681F5EA20E003CB619 /* MASConstraintMaker.h in Headers */,
 				99222F7A1F5EA20E003CB619 /* ViewController+MASAdditions.h in Headers */,
 				99222EDE1F5E8AD6003CB619 /* CSUrlModel.h in Headers */,
@@ -633,12 +705,13 @@
 				99222ED31F5E89BC003CB619 /* MBViewController.h in Headers */,
 				99222F701F5EA20E003CB619 /* MASViewConstraint.h in Headers */,
 				991BB0591F5F948C00FA8783 /* DynamicMethods.h in Headers */,
-				99222F6C1F5EA20E003CB619 /* Masonry.h in Headers */,
 				99A95C441F61868F008F1511 /* hx_object.h in Headers */,
 				9990044F1F5EAFC2008F4522 /* CSIAPManager.h in Headers */,
 				999004511F5EAFC2008F4522 /* CSIAPShare.h in Headers */,
 				99222E721F5E8777003CB619 /* CSGTMBase64.h in Headers */,
 				99222F631F5EA20E003CB619 /* MASCompositeConstraint.h in Headers */,
+				996032691F713D1C00A51B8D /* SCLTimerDisplay.h in Headers */,
+				9960325E1F713D1C00A51B8D /* SCLAlertViewResponder.h in Headers */,
 				99222E631F5E8777003CB619 /* CSGameAPIService.h in Headers */,
 				99222E7D1F5E8777003CB619 /* CSCMPopTipView.h in Headers */,
 				99222E581F5E8777003CB619 /* CSGameSDKpch.h in Headers */,
@@ -770,7 +843,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9960325D1F713D1C00A51B8D /* SCLAlertView.m in Sources */,
 				99222F671F5EA20E003CB619 /* MASConstraint.m in Sources */,
+				9960326C1F713D1C00A51B8D /* UIImage+ImageEffects.m in Sources */,
 				99222EAA1F5E8777003CB619 /* CSSBJson4StreamParser.m in Sources */,
 				99222EDD1F5E8AD6003CB619 /* CSGameModel.m in Sources */,
 				99222F641F5EA20E003CB619 /* MASCompositeConstraint.m in Sources */,
@@ -778,26 +853,32 @@
 				99222E841F5E8777003CB619 /* CSKeychain.m in Sources */,
 				99222F781F5EA20E003CB619 /* View+MASAdditions.m in Sources */,
 				99222EB61F5E8777003CB619 /* CSSFHFKeychainUtils.m in Sources */,
+				996032681F713D1C00A51B8D /* SCLTextView.m in Sources */,
 				99222F691F5EA20E003CB619 /* MASConstraintMaker.m in Sources */,
 				999004521F5EAFC2008F4522 /* CSIAPShare.m in Sources */,
 				99222E801F5E8777003CB619 /* CSDragButton.m in Sources */,
+				9960326A1F713D1C00A51B8D /* SCLTimerDisplay.m in Sources */,
 				99222F761F5EA20E003CB619 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				999004541F5EAFC2008F4522 /* CSSYGameSDK.m in Sources */,
 				99222EB41F5E8777003CB619 /* CSSBJson4Writer.m in Sources */,
 				99222EB21F5E8777003CB619 /* CSSBJson4StreamWriterState.m in Sources */,
 				99222F6B1F5EA20E003CB619 /* MASLayoutConstraint.m in Sources */,
+				996032661F713D1C00A51B8D /* SCLSwitchView.m in Sources */,
 				99222E881F5E8777003CB619 /* CSSSKeychainQuery.m in Sources */,
 				99222E7C1F5E8777003CB619 /* buoyButton.m in Sources */,
 				99222EDF1F5E8AD6003CB619 /* CSUrlModel.m in Sources */,
 				991BB0561F5F944D00FA8783 /* LoadImage.m in Sources */,
 				99222EA81F5E8777003CB619 /* CSSBJson4Parser.m in Sources */,
 				99222ED41F5E89BC003CB619 /* MBViewController.m in Sources */,
+				996032611F713D1C00A51B8D /* SCLAlertViewStyleKit.m in Sources */,
 				9990044E1F5EAFC2008F4522 /* CSIAPHelper.m in Sources */,
+				996032631F713D1C00A51B8D /* SCLButton.m in Sources */,
 				999004501F5EAFC2008F4522 /* CSIAPManager.m in Sources */,
 				99222EB01F5E8777003CB619 /* CSSBJson4StreamWriter.m in Sources */,
 				99222E7E1F5E8777003CB619 /* CSCMPopTipView.m in Sources */,
 				99222E641F5E8777003CB619 /* CSGameAPIService.m in Sources */,
 				99222F951F5EA9B5003CB619 /* CSHttpRequest.m in Sources */,
+				9960325F1F713D1C00A51B8D /* SCLAlertViewResponder.m in Sources */,
 				99A95C451F61868F008F1511 /* hx_object.m in Sources */,
 				99222F6F1F5EA20E003CB619 /* MASViewAttribute.m in Sources */,
 				99222E861F5E8777003CB619 /* CSSSKeychain.m in Sources */,
@@ -805,6 +886,7 @@
 				99222E6D1F5E8777003CB619 /* CSAFURLRequestSerialization.m in Sources */,
 				99222E731F5E8777003CB619 /* CSGTMBase64.m in Sources */,
 				991BB05A1F5F948C00FA8783 /* DynamicMethods.m in Sources */,
+				996032701F7146B500A51B8D /* CSWKWebViewController.m in Sources */,
 				99222ED61F5E89BC003CB619 /* CSNavigationController.m in Sources */,
 				99222EA51F5E8777003CB619 /* CSReachability.m in Sources */,
 				99222F7B1F5EA20E003CB619 /* ViewController+MASAdditions.m in Sources */,

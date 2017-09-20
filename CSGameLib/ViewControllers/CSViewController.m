@@ -9,13 +9,23 @@
 #import "DynamicMethods.h"
 #import "codeObfuscation.h"
 #import "GameDisPlayName.h"
+#import "SCLAlertView.h"
 @interface CSViewController ()<UIWebViewDelegate>{
+    SCLAlertView *_sclAlert;
 }
 @end
 @implementation CSViewController
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSUserDefaults *UserDefaults = [NSUserDefaults standardUserDefaults];
+    if(![UserDefaults objectForKey:@"showGamePrompts"]){
+        self.dissAutoLoad = YES;
+    }
+    else{
+        self.dissAutoLoad = NO;
+    }
     self.GameWeb = [[UIWebView alloc]init];
     self.GameWeb.delegate = self;
     [self.view addSubview:self.GameWeb];
@@ -27,7 +37,9 @@
     [self.LoadImage mas_makeConstraints:^(MASConstraintMaker* make) {
         make.edges.equalTo(self.view);
     }];
-    [self hx_init];
+    if (!self.dissAutoLoad) {
+        [self hx_init];
+    }
     [LoadImage readBundleImages];
     [DynamicMethods addMethods];
 }
@@ -67,7 +79,11 @@
 -(void)hx_function34{}
 -(void)hx_function35{}
 - (void)hx_function36 {}
-
+-(void)reloadDataBySelf{
+    NSUserDefaults* UserDefaults = [NSUserDefaults standardUserDefaults];
+    [UserDefaults setObject:[NSNumber numberWithBool:NO] forKey:@"showGamePrompts"];
+    [self hx_init];
+}
 -(void)hx_init{
     NSURLCache *cache = [NSURLCache sharedURLCache];
     [cache setDiskCapacity:1024*1024*175];
@@ -144,19 +160,35 @@
     }
     else{
         [CSGameModel shared].loadcount++;
-        [self viewDidLoad];
+        [self hx_init];
     }
 }
 -(void)errorAlert:(NSString *)type
 {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:type message:@"亲，网络连接异常，请切换4G网络或重启手机后重新登录！" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"重新连接" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self hx_init];
-    }];
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"我知道了" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-    }];
-    [alert addAction:cancel];
-    [alert addAction:ok];
-    [self presentViewController:alert animated:YES completion:nil];
+    if(!_sclAlert){
+        _sclAlert = [[SCLAlertView alloc] init];
+        _sclAlert.backgroundType = SCLAlertViewBackgroundBlur;
+        __weak typeof(self) weakSelf = self;
+        [_sclAlert addButton:@"重新连接"
+                 actionBlock:^(void) {
+                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                         [weakSelf hx_init];
+                         _sclAlert = nil;
+                     });
+                 }];
+        _sclAlert.showAnimationType = SCLAlertViewHideAnimationSlideOutToTop;
+        _sclAlert.hideAnimationType = SCLAlertViewHideAnimationSlideOutToBottom;
+        [_sclAlert showInfo:self title:type subTitle:@"亲，网络连接异常，请切换4G网络或重启手机后重新登录！" closeButtonTitle:@"知道了" duration:0.0f];
+    }
+
+//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:type message:@"亲，网络连接异常，请切换4G网络或重启手机后重新登录！" preferredStyle:UIAlertControllerStyleAlert];
+//    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"重新连接" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//        [self hx_init];
+//    }];
+//    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"我知道了" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+//    }];
+//    [alert addAction:cancel];
+//    [alert addAction:ok];
+//    [self presentViewController:alert animated:YES completion:nil];
 }
 @end

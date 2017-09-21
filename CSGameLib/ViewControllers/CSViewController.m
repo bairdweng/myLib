@@ -26,6 +26,7 @@
     else{
         self.dissAutoLoad = NO;
     }
+    NSLog(@"%d",self.dissAutoLoad);
     self.GameWeb = [[UIWebView alloc]init];
     self.GameWeb.delegate = self;
     [self.view addSubview:self.GameWeb];
@@ -37,7 +38,18 @@
     [self.LoadImage mas_makeConstraints:^(MASConstraintMaker* make) {
         make.edges.equalTo(self.view);
     }];
-    if (!self.dissAutoLoad) {
+    
+    
+    if(self.dissAutoLoad){
+        SCLAlertView *alert = [[SCLAlertView alloc] init];
+        alert.backgroundType = SCLAlertViewBackgroundBlur;
+        [alert showInfo:self title:@"温馨提示" subTitle:@"注意自我保护，谨防上当受骗，适度游戏益脑，过度游戏伤身，合理安排时间，享受游戏人生。" closeButtonTitle:@"知道了" duration:0.0f];
+        __weak typeof(self) weakSelf = self;
+        [alert alertDismissAnimationIsCompleted:^{
+            [weakSelf reloadDataBySelf];
+        }];
+    }
+    else{
         [self hx_init];
     }
     [LoadImage readBundleImages];
